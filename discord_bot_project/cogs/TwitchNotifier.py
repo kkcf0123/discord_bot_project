@@ -27,9 +27,9 @@ class TwitchNotifier:
                 stream_url = 'https://www.twitch.tv/' + streamer_name
                 embed = Embed(title=stream_title, url=stream_url)
                 embed.set_author(name=streamer_name)
-                await self.client.get_channel(950940240783216660).send('스트리밍이 시작되었습니다!', embed=embed)
+                await self.client.get_channel('your_channel').send('스트리밍이 시작되었습니다!', embed=embed)
         else:
-            await self.client.get_channel(950940240783216660).send("현재 스트리밍 중이 아닙니다.")
+            await self.client.get_channel('your_channel').send("현재 스트리밍 중이 아닙니다.")
 
     async def loop_check_streaming(self):
         while True:

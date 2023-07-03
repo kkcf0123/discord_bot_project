@@ -9,8 +9,8 @@ class TwitchNotifier:
         self.client = client
         self.twitch_api_url = f"https://api.twitch.tv/helix/streams?user_login={twitch_account_id}"
         self.headers = {
-            'Authorization': 'Bearer <oi2rg1dx3b9lmsjy16uzdz4tmitb1l>',
-            'Client-Id': 'cvenax7ibl8awp96c7p4fwqb3dhi5i'
+            'Authorization': 'Bearer <your_author>',
+            'Client-Id': 'your client id'
         }
         self._stream_data = {}
 

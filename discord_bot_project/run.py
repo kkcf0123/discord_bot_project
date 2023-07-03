@@ -8,7 +8,7 @@ import logging
 
 # discord Token
 load_dotenv()
-INE_TOKEN = os.getenv('INE_TOKEN')
+Token = os.getenv('your_token')
 
 # intents
 intents = discord.Intents.all()
@@ -16,12 +16,12 @@ intents.members = True
 
 client = commands.Bot(command_prefix='$', intents = intents)
 
-status = cycle(['멤버들 감시', '쉬고싶어'])
+status = cycle(['A', 'B'])
 
 @client.event
 async def on_ready():
     change_status.start()
-    print(f'{client.user} has connected to Discord!')
+    print(f'{client.user} online')
     await client.load_extension('cogs.cog_manager')
     
 @tasks.loop(seconds=10)

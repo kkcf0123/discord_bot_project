@@ -30,7 +30,7 @@ async def change_status():
 
 async def main():
     async with client:
-        await client.start(INE_TOKEN)
+        await client.start(Token)
 
 logging.basicConfig(level=logging.ERROR)
 asyncio.run(main())
